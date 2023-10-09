@@ -72,3 +72,11 @@ arr2String.filter((i) => {
     }
     console.log(arrFilter);
 });
+// const arrayString: Array<number> = [15, 25, 14, 47, 15];
+//  tuples in typescript
+//  or also called as fixed size array
+const arrayumber = [15, 25, 14];
+const arrayTuple = ["aksh", 25, true];
+const index = arrayTuple.indexOf("aks");
+console.log(index);
+const stringArray = ["Akshay", "aksh", "Pratik", "prat"];
