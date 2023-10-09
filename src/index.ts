@@ -95,7 +95,61 @@ arr2String.filter((i) => {
 //  or also called as fixed size array
 const arrayumber: [number, number, number] = [15, 25, 14];
 const arrayTuple: [string, number, boolean] = ["aksh", 25, true];
-const index = arrayTuple.indexOf("aks");
+const index = arrayTuple.indexOf("aksh");
 console.log(index);
 const stringArray: Array<string> = ["Akshay", "aksh", "Pratik", "prat"];
 
+// object in typescript
+// but here if we dont want to give gender then we can mke it optional
+// type Obj = {
+//   height: number;
+//   weight: number;
+//   gender?: string;
+//   isAdult: boolean;
+// };
+
+// with object always create interface
+//  because using extends we can add extra properties
+interface Obj {
+  height: number;
+  weight: number;
+  gender?: string;
+  isAdult?: boolean;
+}
+
+type functionType = (n: number, m: number) => void;
+interface newObj extends Obj {
+  isGraduate: boolean;
+  func: functionType;
+}
+
+const ken: newObj = {
+  isGraduate: true,
+  height: 55,
+  weight: 85,
+  func: (n, m) => {
+    console.log(n * m);
+  },
+};
+
+ken.func(20, 500);
+
+const object: newObj = {
+  height: 54,
+  weight: 100,
+  isGraduate: true,
+  func: (n, m) => {
+    return n * m;
+  },
+};
+const obj: Obj = {
+  height: 25,
+  weight: 55,
+  gender: "Male",
+  isAdult: true,
+};
+const obj2: Obj = {
+  height: 22,
+  weight: 60,
+  isAdult: true,
+};

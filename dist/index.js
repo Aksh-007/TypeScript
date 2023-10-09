@@ -77,6 +77,34 @@ arr2String.filter((i) => {
 //  or also called as fixed size array
 const arrayumber = [15, 25, 14];
 const arrayTuple = ["aksh", 25, true];
-const index = arrayTuple.indexOf("aks");
+const index = arrayTuple.indexOf("aksh");
 console.log(index);
 const stringArray = ["Akshay", "aksh", "Pratik", "prat"];
+const ken = {
+    isGraduate: true,
+    height: 55,
+    weight: 85,
+    func: (n, m) => {
+        console.log(n * m);
+    },
+};
+ken.func(20, 500);
+const object = {
+    height: 54,
+    weight: 100,
+    isGraduate: true,
+    func: (n, m) => {
+        return n * m;
+    },
+};
+const obj = {
+    height: 25,
+    weight: 55,
+    gender: "Male",
+    isAdult: true,
+};
+const obj2 = {
+    height: 22,
+    weight: 60,
+    isAdult: true,
+};
