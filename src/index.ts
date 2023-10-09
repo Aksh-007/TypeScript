@@ -153,3 +153,20 @@ const obj2: Obj = {
   weight: 60,
   isAdult: true,
 };
+
+// Function in typescript
+type funcType5 = (n: number, m: number, l?: number) => number;
+const func5: funcType5 = (a, b, l) => {
+  // type guard if no value pass for l
+  if (typeof l === "undefined") {
+    return a * b;
+  }
+  return a * b * l;
+};
+
+console.log(func5(20, 25));
+
+//  without type
+const func3 = (n: number, m: number) => {
+  return n * m;
+};

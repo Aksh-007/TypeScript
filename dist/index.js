@@ -108,3 +108,15 @@ const obj2 = {
     weight: 60,
     isAdult: true,
 };
+const func5 = (a, b, l) => {
+    // type guard if no value pass for l
+    if (typeof l === "undefined") {
+        return a * b;
+    }
+    return a * b * l;
+};
+console.log(func5(20, 25));
+//  without type
+const func3 = (n, m) => {
+    return n * m;
+};
