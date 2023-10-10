@@ -133,3 +133,11 @@ const restFunc = (...m) => {
     return m;
 };
 restFunc(25, 23, 24, 25, 26, 27);
+const commonFunc = function commonFunc(n) {
+    // return n;
+    console.log(n);
+};
+// funtion with object
+const getData = (product) => {
+    console.log(product);
+};

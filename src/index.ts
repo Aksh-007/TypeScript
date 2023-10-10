@@ -192,3 +192,21 @@ const restFunc: restFunc = (...m) => {
 };
 
 restFunc(25, 23, 24, 25, 26, 27);
+
+// Common functin with alias type
+// with type alias
+type comFunc = (n: number) => number | void;
+const commonFunc: comFunc = function commonFunc(n) {
+  // return n;
+  console.log(n);
+};
+
+// funtion with object
+const getData = (product: {
+  name: string;
+  stock: number;
+  price: number;
+  photo: string;
+}): void => {
+  console.log(product);
+};
