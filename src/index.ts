@@ -155,11 +155,13 @@ const obj2: Obj = {
 };
 
 // Function in typescript
-type funcType5 = (n: number, m: number, l?: number) => number;
+
+type funcType5 = (n: number, m: number, l?: number) => number | string;
 const func5: funcType5 = (a, b, l) => {
   // type guard if no value pass for l
   if (typeof l === "undefined") {
     return a * b;
+    // return "L is undefined";
   }
   return a * b * l;
 };
@@ -170,3 +172,23 @@ console.log(func5(20, 25));
 const func3 = (n: number, m: number) => {
   return n * m;
 };
+
+// Default paramater in function
+
+const defaultParamater: funcType5 = (a = 20, b, l = 20) => {
+  return a * b * l;
+};
+console.log(defaultParamater(25, 23));
+
+// Rest operator in Typescript
+// const restFunc = (...m: any[]) => {
+// by using types alias
+type restFunc = (...m: number[]) => number[];
+const restFunc: restFunc = (...m) => {
+  m.forEach((element) => {
+    console.log(element);
+  });
+  return m;
+};
+
+restFunc(25, 23, 24, 25, 26, 27);

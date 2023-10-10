@@ -112,6 +112,7 @@ const func5 = (a, b, l) => {
     // type guard if no value pass for l
     if (typeof l === "undefined") {
         return a * b;
+        // return "L is undefined";
     }
     return a * b * l;
 };
@@ -120,3 +121,15 @@ console.log(func5(20, 25));
 const func3 = (n, m) => {
     return n * m;
 };
+// Default paramater in function
+const defaultParamater = (a = 20, b, l = 20) => {
+    return a * b * l;
+};
+console.log(defaultParamater(25, 23));
+const restFunc = (...m) => {
+    m.forEach((element) => {
+        console.log(element);
+    });
+    return m;
+};
+restFunc(25, 23, 24, 25, 26, 27);
