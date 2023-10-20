@@ -202,11 +202,22 @@ const commonFunc: comFunc = function commonFunc(n) {
 };
 
 // funtion with object
-const getData = (product: {
+type getDataType = (product: {
   name: string;
   stock: number;
   price: number;
-  photo: string;
-}): void => {
+  photo?: string;
+}) => void;
+
+const getData: getDataType = (product): void => {
   console.log(product);
 };
+
+const product1 = {
+  name: "Macbook",
+  stock: 46,
+  price: 99999,
+  // photo: "Samplephoto",
+};
+
+getData(product1);
