@@ -137,7 +137,13 @@ const commonFunc = function commonFunc(n) {
     // return n;
     console.log(n);
 };
-// funtion with object
 const getData = (product) => {
     console.log(product);
 };
+const product1 = {
+    name: "Macbook",
+    stock: 46,
+    price: 99999,
+    // photo: "Samplephoto",
+};
+getData(product1);
